@@ -22,6 +22,7 @@ import { PagesRoutingModule } from '../pages/pages-routing.module';
   exports:[
     SidebarComponent,
     HeaderComponent
-  ]
+  ],
+  providers:[SidebarComponent]
 })
 export class LayoutModule { }

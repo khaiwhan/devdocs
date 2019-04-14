@@ -1,0 +1,22 @@
+.icon{
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(82, 82, 82);
+}
+.icon:hover{
+    color: rgb(29, 28, 28);
+}
+.toolbar{
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+.button{
+    cursor: pointer;
+    outline: none;
+}
+.button:active{
+    background-color: rgb(233, 233, 233);
+}
+.right{
+    margin-left: auto;
+}

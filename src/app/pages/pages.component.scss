@@ -1,10 +1,38 @@
-.grid-container{
-    display: grid;
-    grid-template-columns: 0.25fr 1fr;
+.grid-container {
+  display: grid;
+  grid-template:
+    "header header"
+    "sidebar content"
+    / 0.7fr 3fr;
 }
-.sidebar{
-    
+.header {
+  grid-area: header;
 }
-.content{
-    
+.sidebar {
+  margin-top: 20px;
+  grid-area: sidebar;
+}
+.content {
+  padding: 20px;
+  grid-area: content;
+  overflow-y: scroll;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(80, 80, 80);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(75, 75, 75);
 }

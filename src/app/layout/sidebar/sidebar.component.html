@@ -1,9 +1,9 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="container">
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="container" id="sidebar">
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-    <a mat-button routerLink="/{{node.url}}" style="padding-left: 40px"><img src="../../../assets/{{node.icon}}" alt="">&nbsp;{{node.name}}</a>
+    <a mat-button routerLink="/{{node.url}}" style="padding-left: 40px" matTooltip="{{node.name}}"><img src="../../../assets/{{node.icon}}" alt="">&nbsp;{{node.name}}</a>
   </mat-tree-node>
   <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-    <a mat-button routerLink="/{{node.url}}" matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+    <a mat-button routerLink="/{{node.url}}" matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name" matTooltip="{{node.name}}" >
       <mat-icon class="mat-icon-rtl-mirror">
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       </mat-icon>

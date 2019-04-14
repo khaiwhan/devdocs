@@ -8,7 +8,7 @@ import { MENU_DATA } from 'src/app/model/menus/list-menu-data'
 interface FlatNode {
   expandable: boolean;
   name: string;
-  url:string;
+  url: string;
   level: number;
 }
 
@@ -22,27 +22,27 @@ export class SidebarComponent implements OnInit {
     return {
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
-      url:node.url,
-      icon:node.icon,
+      url: node.url,
+      icon: node.icon,
       level: level,
     };
   }
 
   treeControl = new FlatTreeControl<FlatNode>(
-      node => node.level, node => node.expandable);
+    node => node.level, node => node.expandable);
 
   treeFlattener = new MatTreeFlattener(
-      this.transformer, node => node.level, node => node.expandable, node => node.children);
+    this.transformer, node => node.level, node => node.expandable, node => node.children);
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-
   constructor() {
     this.dataSource.data = MENU_DATA;
   }
 
   hasChild = (_: number, node: FlatNode) => node.expandable;
-  
+
   ngOnInit() {
+    
   }
 
 }
