@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar">
+<mat-toolbar class="toolbar" id="toolbar">
     <span>
         <mat-icon class="icon" aria-hidden="false" matTooltip="Toggle Menu" id="trick" (click)="toggle()">
             view_headline
@@ -6,8 +6,8 @@
     </span>
     <span routerLink="/home" class="button" matTooltip="Home">Devdocuments</span>
     <span class="right">
-        <mat-icon class="icon" aria-hidden="false" matTooltip="Do not click here!!">
-            public
+        <mat-icon class="icon" aria-hidden="false" matTooltip="Change theme!!" (click)="changeTheme()">
+            palette
         </mat-icon>
     </span>
 </mat-toolbar>
