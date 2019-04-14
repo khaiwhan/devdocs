@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
-import { HtmlComponent } from './html/html.component';
 import { LayoutModule } from '../layout/layout.module';
 import { MaterialModel } from '../shared/utils/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,7 +33,33 @@ import { TypescriptComponent } from './typescript/typescript.component';
 import { XmlComponent } from './xml/xml.component';
 
 @NgModule({
-  declarations: [PagesComponent, HtmlComponent, HomeComponent, CssComponent, JavascriptComponent, AjaxComponent, AngularComponent, ArduinoComponent, AspComponent, BootstrapComponent, CsharpComponent, DomComponent, FirebaseComponent, JavaComponent, JqueryComponent, JsonComponent, MysqlComponent, NodejsComponent, PhpComponent, ReactnativeComponent, ScssComponent, SeleniumComponent, SocketComponent, SwiftComponent, TypescriptComponent, XmlComponent],
+  declarations: [
+    PagesComponent,
+    HomeComponent,
+    CssComponent,
+    JavascriptComponent,
+    AjaxComponent,
+    AngularComponent,
+    ArduinoComponent,
+    AspComponent,
+    BootstrapComponent,
+    CsharpComponent,
+    DomComponent,
+    FirebaseComponent,
+    JavaComponent,
+    JqueryComponent,
+    JsonComponent,
+    MysqlComponent,
+    NodejsComponent,
+    PhpComponent,
+    ReactnativeComponent,
+    ScssComponent,
+    SeleniumComponent,
+    SocketComponent,
+    SwiftComponent,
+    TypescriptComponent,
+    XmlComponent,
+  ],
   imports: [
     CommonModule,
     PagesRoutingModule,
@@ -46,7 +71,7 @@ import { XmlComponent } from './xml/xml.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  exports:[
+  exports: [
     PagesComponent
   ]
 })

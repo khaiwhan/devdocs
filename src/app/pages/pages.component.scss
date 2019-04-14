@@ -3,7 +3,7 @@
   grid-template:
     "header header"
     "sidebar content"
-    / 0.7fr 3fr;
+    / 1fr 3fr;
 }
 .header {
   grid-area: header;

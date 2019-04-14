@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HtmlComponent } from './html/html.component';
 import { HomeComponent } from './home/home.component';
 import { CssComponent } from './css/css.component';
 import { JavascriptComponent } from './javascript/javascript.component';
@@ -65,7 +64,7 @@ const routes: Routes = [
   },
   {
     path:'html',
-    component:HtmlComponent
+    loadChildren:'./html/html.module#HtmlModule'
   },
   {
     path:'home',
