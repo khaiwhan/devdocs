@@ -108,6 +108,7 @@ import { VarComponent } from './var/var.component';
 import { VideoComponent } from './video/video.component';
 import { WbrComponent } from './wbr/wbr.component';
 import { ButtonComponent } from './button/button.component';
+import { HtmlLayoutModule } from 'src/app/layout/component/html-layout/html-layout.module';
 
 @NgModule({
   declarations: [
@@ -220,7 +221,8 @@ import { ButtonComponent } from './button/button.component';
   ],
   imports: [
     CommonModule,
-    HtmlRoutingModule
+    HtmlRoutingModule,
+    HtmlLayoutModule
   ],
 })
 export class HtmlModule { }

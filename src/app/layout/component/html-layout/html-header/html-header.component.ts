@@ -2,16 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { HtmlModelService } from 'src/app/model/html/html-model.service';
 
 @Component({
-  selector: 'app-a',
-  templateUrl: './a.component.html',
-  styleUrls: ['./a.component.scss']
+  selector: 'app-html-header',
+  templateUrl: './html-header.component.html',
+  styleUrls: ['./html-header.component.scss']
 })
-export class AComponent implements OnInit {
+export class HtmlHeaderComponent implements OnInit {
   data;
   constructor(private htmldata:HtmlModelService) { }
 
   ngOnInit() {
-    this.htmldata.setHtmlData(0)
+    this.data = this.htmldata.getHtmlData()
   }
-
 }

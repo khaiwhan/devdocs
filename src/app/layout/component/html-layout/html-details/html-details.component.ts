@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { HtmlModelService } from 'src/app/model/html/html-model.service';
 
 @Component({
-  selector: 'app-abbr',
-  templateUrl: './abbr.component.html',
-  styleUrls: ['./abbr.component.scss']
+  selector: 'app-html-details',
+  templateUrl: './html-details.component.html',
+  styleUrls: ['./html-details.component.scss']
 })
-export class AbbrComponent implements OnInit {
+export class HtmlDetailsComponent implements OnInit {
   data;
   constructor(private htmldata: HtmlModelService) { }
 
   ngOnInit() {
-    this.htmldata.setHtmlData(1)
+    this.data = this.htmldata.getHtmlData()
   }
+
 }
