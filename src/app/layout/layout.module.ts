@@ -6,9 +6,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModel } from '../shared/utils/material';
 import { HttpClientModule } from '@angular/common/http';
 import { PagesRoutingModule } from '../pages/pages-routing.module';
+import { SubheaderComponent } from './html/subheader/subheader.component';
+import { HeadercontentComponent } from './html/headercontent/headercontent.component';
 
 @NgModule({
-  declarations: [SidebarComponent, HeaderComponent],
+  declarations: [
+    SidebarComponent,
+    HeaderComponent,
+    SubheaderComponent,
+    HeadercontentComponent,
+  ],
   imports: [
     PagesRoutingModule,
     CommonModule,
@@ -19,10 +26,10 @@ import { PagesRoutingModule } from '../pages/pages-routing.module';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  exports:[
+  exports: [
     SidebarComponent,
     HeaderComponent
   ],
-  providers:[SidebarComponent]
+  providers: [SidebarComponent]
 })
 export class LayoutModule { }
